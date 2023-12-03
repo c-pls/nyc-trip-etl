@@ -1,0 +1,16 @@
+FROM bitnami/spark
+
+ENV AWS_DEFAULT_REGION=ap-southeast-1
+
+USER root:root
+# Install AWS SDK and Hadoop AWS
+RUN apt-get update && apt-get install -y wget ncurses-bin
+# RUN pip install awscli
+# RUN pip install boto3
+
+# # Set AWS environment variables for Hadoop AWS
+# ENV HADOOP_VERSION=3.3.1
+# ENV HADOOP_AWS_VERSION=3.3.1
+# ENV HADOOP_AWS_JAR_URL=https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/${HADOOP_AWS_VERSION}/hadoop-aws-${HADOOP_AWS_VERSION}.jar
+# # Download and add the Hadoop AWS JAR to the Spark classpath
+# RUN wget ${HADOOP_AWS_JAR_URL} -P ${SPARK_HOME}/jars

@@ -1,0 +1,46 @@
+# Airflow logs
+logs/
+*.log
+*.out
+
+# Airflow database and metadata
+*.db
+*.sqlite
+*.sqlitedb
+airflow.cfg
+
+# Airflow virtual environment
+venv/
+__pycache__/
+
+# Airflow config
+config/
+plugins/
+
+# Python bytecode
+*.pyc
+*.pyo
+__pycache__/
+
+# IDE specific
+.vscode/
+.idea/
+
+# Compiled Python files
+*.pyc
+*.pyo
+
+# Ignore any local .env files
+.env
+
+# Ignore sensitive credentials or secrets
+secrets.yaml
+*.key
+*.pem
+*.cer
+
+# Ignore temporary or cache directories
+.tmp/
+.cache/
+__temp__/
+.python-version
